@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class FaculdadeEntity {
+public class Faculdade {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
