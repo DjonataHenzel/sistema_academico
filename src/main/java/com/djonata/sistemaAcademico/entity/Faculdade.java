@@ -11,7 +11,7 @@ public class Faculdade {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	private String razaoSocial;
 
 	public Long getId() {
@@ -29,5 +29,5 @@ public class Faculdade {
 	public void setRazaoSocial(String razaoSocial) {
 		this.razaoSocial = razaoSocial;
 	}
-	
+
 }
