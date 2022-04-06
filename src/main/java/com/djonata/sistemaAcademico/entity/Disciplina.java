@@ -131,4 +131,13 @@ public class Disciplina {
 		this.curso = curso;
 	}
 
+	@Override
+	public String toString() {
+		return "Curso -> Cod = " + this.getId() + " - Descrição = " + this.getDescricao() + " - Carga Horaria total = "
+				+ this.getCargHorariaTotal() + " - Carga Horaria Pratica = " + this.getCargHorariaPratica()
+				+ " - Carga Horaria Teorica = " + this.getCargHorariaTeorica() + " - Quantidade de alunos = "
+				+ this.getQtAlunos() + " - Usuario = " + this.getUsuario() + " - Data/Hora cadastro = "
+				+ this.dataCadastro + " - Data/Hora Alteração = " + this.getDataAlteracao();
+	}
+
 }

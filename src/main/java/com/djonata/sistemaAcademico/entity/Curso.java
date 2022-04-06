@@ -87,4 +87,11 @@ public class Curso {
 		this.faculdade = faculdade;
 	}
 
+	@Override
+	public String toString() {
+		return "Curso -> Cod = " + this.getId() + " - Descrição = " + this.getDescricao() + " - Usuario = "
+				+ this.getUsuario() + " - Data/Hora cadastro = " + this.dataCadastro + " - Data/Hora Alteração = "
+				+ this.getDataAlteracao();
+	}
+
 }

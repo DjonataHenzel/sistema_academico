@@ -27,15 +27,25 @@ public class InseridosDadosIniciais implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		// -----------------------INSERT-------------------------
 		/*
 		 * Inserindo dados do banco referente a tabela faculdade
 		 */
 		Faculdade f1 = new Faculdade();
 		Faculdade f2 = new Faculdade();
+		Faculdade f3 = new Faculdade();
+		Faculdade f4 = new Faculdade();
+		Faculdade f5 = new Faculdade();
 		f1.setRazaoSocial("Unopar");
 		f2.setRazaoSocial("Anhanguera");
+		f3.setRazaoSocial("UTFPR");
+		f4.setRazaoSocial("FAG");
+		f5.setRazaoSocial("Unipar");
 		faculdadeRepository.save(f1);
 		faculdadeRepository.save(f2);
+		faculdadeRepository.save(f3);
+		faculdadeRepository.save(f4);
+		faculdadeRepository.save(f5);
 
 		/*
 		 * Inserindo dados do banco referente a tabela curso
@@ -54,6 +64,20 @@ public class InseridosDadosIniciais implements CommandLineRunner {
 		c2.setDataAlteracao(LocalDateTime.now());
 		c2.setFaculdade(f2);
 		cursoRepository.save(c2);
+		Curso c3 = new Curso();
+		c3.setDescricao("Matematica");
+		c3.setUsuario("Galvao");
+		c3.setDataCadastro(LocalDateTime.now());
+		c3.setDataAlteracao(LocalDateTime.now());
+		c3.setFaculdade(f2);
+		cursoRepository.save(c3);
+		Curso c4 = new Curso();
+		c4.setDescricao("Lingua Portuguesa");
+		c4.setUsuario("Imelia");
+		c4.setDataCadastro(LocalDateTime.now());
+		c4.setDataAlteracao(LocalDateTime.now());
+		c4.setFaculdade(f2);
+		cursoRepository.save(c4);
 
 		/*
 		 * Inserindo dados do banco referente a tabela disciplina
@@ -80,7 +104,27 @@ public class InseridosDadosIniciais implements CommandLineRunner {
 		d2.setDataCadastro(LocalDateTime.now());
 		d2.setCurso(c2);
 		disciplinaRepository.save(d2);
-
+		Disciplina d3 = new Disciplina();
+		d3.setDescricao("Libras");
+		d3.setCargHorariaTotal(50);
+		d3.setCargHorariaPratica(30);
+		d3.setCargHorariaTeorica(20);
+		d3.setQtAlunos(5);
+		d3.setUsuario("Carmen");
+		d3.setDataAlteracao(LocalDateTime.now());
+		d3.setDataCadastro(LocalDateTime.now());
+		d3.setCurso(c2);
+		disciplinaRepository.save(d3);
+		Disciplina d4 = new Disciplina();
+		d4.setDescricao("Calculo avaçado");
+		d4.setCargHorariaTotal(10);
+		d4.setCargHorariaPratica(20);
+		d4.setCargHorariaTeorica(60);
+		d4.setQtAlunos(15);
+		d4.setUsuario("Jose");
+		d4.setDataAlteracao(LocalDateTime.now());
+		d4.setDataCadastro(LocalDateTime.now());
+		d4.setCurso(c2);
+		disciplinaRepository.save(d4);
 	}
-
 }

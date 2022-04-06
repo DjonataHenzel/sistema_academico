@@ -30,4 +30,9 @@ public class Faculdade {
 		this.razaoSocial = razaoSocial;
 	}
 
+	@Override
+	public String toString() {
+		return "Curso -> Cod = " + this.getId() + " - Descrição = " + this.getRazaoSocial();
+	}
+
 }
